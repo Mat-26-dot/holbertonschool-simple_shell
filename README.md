@@ -24,6 +24,7 @@ _italic text_
 
 [Hyperlink name](https://github.com/JonathanCharalambous/holbertonschool-simple_shell)
 
-![Image name](https://avatars1.githubusercontent.com/u/9919?v=4)
+![OCTOCAT](https://avatars1.githubusercontent.com/u/9919?v=4)
+
 
 

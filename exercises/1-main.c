@@ -2,8 +2,8 @@
 #include <unistd.h>
 
 /**
- * main - fork example
- *
+ * main - fork examplehfsdjhsdjkf
+ * 
  * Return: Always 0.
  */
 int main(void)
@@ -25,7 +25,7 @@ int main(void)
 	
         for (i = 0; i < 5; i++)
 	{
-		my_pid = getpid();
+		my_pid = fork();
 		printf("(%u) Nooooooooo!\n", my_pid);
 	}
     }

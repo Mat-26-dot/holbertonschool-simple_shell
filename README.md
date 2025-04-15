@@ -26,5 +26,8 @@ _italic text_
 
 ![OCTOCAT](https://avatars1.githubusercontent.com/u/9919?v=4)
 
+`code line`
 
+```code blocks
+more code blocks```
 

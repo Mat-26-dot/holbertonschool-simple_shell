@@ -22,7 +22,7 @@ _italic text_
 
 &copy; 
 
-[Hyperlink name](https://github.com/JonathanCharalambous/holbertonschool-simple_shell)
+[Hyperlink name](https://medium.com/analytics-vidhya/how-to-create-a-readme-md-file-8fb2e8ce24e3)
 
 ![OCTOCAT](https://avatars1.githubusercontent.com/u/9919?v=4)
 
@@ -31,4 +31,6 @@ _italic text_
 ```
 code blocks
 ```
+
+
 

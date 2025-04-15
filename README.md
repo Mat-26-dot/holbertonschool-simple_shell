@@ -28,6 +28,7 @@ _italic text_
 
 `code line`
 
-```code blocks
-more code blocks```
+```
+code blocks
+```
 

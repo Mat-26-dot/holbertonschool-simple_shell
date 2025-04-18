@@ -11,11 +11,10 @@ char *find_in_path(char *cmd)
 
 	while (token != NULL)
 	{
-		snprintf(full_path, sizeof(full_path), "%s%s", token, cmd);
+		snprintf(full_path, sizeof(full_path), "%s/%s", token, cmd);
 		if (access(full_path, X_OK) == 0)
 			return (full_path);
 		token = strtok(NULL, ":");
 	}
-
 	return (NULL);
 }

@@ -26,7 +26,7 @@ int main(void)
 
 		if (args[0] == NULL)
 			continue;
-		if (handle_builtin(args))
+		if (command(args))
 			continue;
 
 		cmd_path = find_in_path(args[0]);

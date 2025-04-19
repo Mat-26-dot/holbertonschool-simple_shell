@@ -7,9 +7,15 @@ _short summary of a shell here_
 
 ## Usage
 Respond to text commands and function calling\
-![base](https://github.com/user-attachments/assets/255bd70a-19db-4552-9ab8-98d2668094bf)
-
-_insert examples of use here from exercises_\
+`simple_shell`\
+<li>Display a prompt and wait for the user to type a command. A command line always ends with a new line.</li>\
+The prompt is displayed again each time a command has been executed.\
+The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features.\
+The command lines are made only of one word. No arguments will be passed to programs.\
+If an executable cannot be found, print an error message and display the prompt again.\
+Handle errors.\
+You have to handle the “end of file” condition `(Ctrl+D)`\
+_insert examples of use here from exercises_
 ```
 using code block formatting
 ```

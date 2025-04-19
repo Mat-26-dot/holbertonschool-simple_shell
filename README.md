@@ -25,9 +25,9 @@ Chrome 77.0.3865.120 or superior
 16GB Memory
 
 ## Authors
-[Johnathan](https://github.com/JonathanCharalambous)/n
-[Mat](https://github.com/Mat-26-dot)/n
-[Marianne](https://github.com/T0ILETR0LL)/n
+[Johnathan](https://github.com/JonathanCharalambous)\
+[Mat](https://github.com/Mat-26-dot)\
+[Marianne](https://github.com/T0ILETR0LL)
 
 ## Resources
 [Everything you need to know to start coding your own shell](https://intranet.hbtn.io/concepts/900)/n

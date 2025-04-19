@@ -1,5 +1,5 @@
 # SIMPLE SHELL
-A simple UNIX command interpreter./
+A simple UNIX command interpreter.\
 _short summary of a shell here_
 
 ## Process

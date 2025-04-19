@@ -39,5 +39,5 @@ Chrome 77.0.3865.120 or superior\
 
 ## Resources
 [Everything you need to know to start coding your own shell](https://intranet.hbtn.io/concepts/900)\
-[Basic writing and formatting syntax](https://medium.com/analytics-vidhya/how-to-create-a-readme-md-file-8fb2e8ce24e3](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+[Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 

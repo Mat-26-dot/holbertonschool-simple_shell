@@ -25,11 +25,11 @@ Chrome 77.0.3865.120 or superior
 16GB Memory
 
 ## Authors
-[Johnathan](https://github.com/JonathanCharalambous)
-[Mat](https://github.com/Mat-26-dot)
-[Marianne](https://github.com/T0ILETR0LL)
+[Johnathan](https://github.com/JonathanCharalambous)/n
+[Mat](https://github.com/Mat-26-dot)/n
+[Marianne](https://github.com/T0ILETR0LL)/n
 
 ## Resources
-[Everything you need to know to start coding your own shell](https://intranet.hbtn.io/concepts/900)
+[Everything you need to know to start coding your own shell](https://intranet.hbtn.io/concepts/900)/n
 [How to create a README file](https://medium.com/analytics-vidhya/how-to-create-a-readme-md-file-8fb2e8ce24e3)
 

@@ -16,7 +16,8 @@ Respond to text commands and function calling \
 + Handle errors.
 + Handle the “end of file” condition `Ctrl+D`
 
-_insert examples of use here from exercises_
+_insert examples of use here from exercises_\
+_we can even do checkbox style_
 ```
 using code block formatting
 ```
@@ -29,7 +30,7 @@ Holberton’s Sandbox\
 Requirements:\
 Windows 10\
 Chrome 77.0.3865.120 or superior\
-16GB Memory\
+16GB Memory
 
 ## Authors
 [Johnathan](https://github.com/JonathanCharalambous)\
@@ -38,5 +39,5 @@ Chrome 77.0.3865.120 or superior\
 
 ## Resources
 [Everything you need to know to start coding your own shell](https://intranet.hbtn.io/concepts/900)\
-[How to create a README file](https://medium.com/analytics-vidhya/how-to-create-a-readme-md-file-8fb2e8ce24e3)
+[Basic writing and formatting syntax](https://medium.com/analytics-vidhya/how-to-create-a-readme-md-file-8fb2e8ce24e3](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 

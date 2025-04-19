@@ -6,7 +6,7 @@ _short summary of a shell here_
 ![cflowchart](https://github.com/user-attachments/assets/6b628811-2377-456f-a7b8-a854e80168e3)
 
 ## Usage
-Respond to text commands and function calling\
+Respond to text commands and function calling \
 `simple_shell`
 <li>Display a prompt and wait for the user to type a command. A command line always ends with a new line.</li>
 <li>The prompt is displayed again each time a command has been executed.</li>
@@ -14,8 +14,9 @@ Respond to text commands and function calling\
 <li>The command lines are made only of one word. No arguments will be passed to programs.</li>
 <li>If an executable cannot be found, print an error message and display the prompt again.</li>
 <li>Handle errors.</li>
-<li>Handle the “end of file” condition `(Ctrl+D)`</li>
-\
+<li>Handle the “end of file” condition</li> 
+`Ctrl+D` 
+
 _insert examples of use here from exercises_
 ```
 using code block formatting

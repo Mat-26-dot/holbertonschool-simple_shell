@@ -6,7 +6,7 @@ int main(void)
 	size_t len = 0;
 	ssize_t rd = 0;
 	char *args[MAX_ARGS];
-	char *cmd_path = "";
+	char *cmd_path = NULL;
 	pid_t pid;
 	int status = 0;
 	int interactive = isatty(STDIN_FILENO);
@@ -37,7 +37,7 @@ int main(void)
 		if (!cmd_path)
 		{
 			fprintf(stderr, "./hsh: 1: %s: not found\n", args[0]);
-			status = 2;
+			status = 127;
 			continue;
 		}
 		pid = fork();

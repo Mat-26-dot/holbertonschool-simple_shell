@@ -38,6 +38,7 @@ int main(void)
 		{
 			fprintf(stderr, "./hsh: 1: %s: not found\n", args[0]);
 			status = 127;
+			free(cmd_path);
 			continue;
 		}
 		pid = fork();
@@ -51,7 +52,10 @@ int main(void)
 		else if (pid < 0)
 			perror("fork");
 		else
+		{
 			waitpid(pid, &status, 0);
+			free(cmd_path);
+		}
 	}
 	free(line);
 	return (status);

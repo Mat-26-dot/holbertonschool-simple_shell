@@ -9,11 +9,12 @@ int main(void)
 	char *cmd_path = "";
 	pid_t pid;
 	int status;
+	int interactive = isatty(STDIN_FILENO);
 
 	while (1)
 	{
 
-		if(isatty(STDIN_FILENO))
+		if(interactive)
 			prompt();
 		rd = getline(&line, &len, stdin);
 		if (rd == -1)

@@ -1,45 +1,43 @@
 #include "main.h"
 
-ssize_t _getline(char **lineptr, size_t *n, FILE *stream)
+ssize_t _getline(char **lineptr, size_t *n)
 {
-	size_t bufsize = 128;
-	size_t i = 0;
-	int ch;
-	char *buf;
-
-	if (!lineptr || !n || !stream)
-		return -1;
+	size_t bufsize = 1024;
+	ssize_t i = 0;
+	char c = '\0';
+	char *buffer;
 
 	if (*lineptr == NULL || *n == 0)
 	{
-		buf = malloc(bufsize);
-		if (!buf)
+		*lineptr = malloc(bufsize);
+		if (!*lineptr)
 			return -1;
-		*lineptr = buf;
 		*n = bufsize;
 	}
-	else
-		buf = *lineptr;
 
-	while ((ch = fgetc(stream)) != EOF)
+	buffer = *lineptr;
+
+	while (1)
 	{
-		if (i + 1 >= *n)
+		ssize_t r = read(STDIN_FILENO, &c, 1);
+		if (r == -1 || (r == 0 && i == 0))
+			return -1;
+		if (r == 0)
+			break;
+		if (i >= (ssize_t)(*n - 1))
 		{
-			char *tmp = realloc(buf, *n * 2);
-			if (!tmp)
+			bufsize *= 2;
+			buffer = realloc(buffer, bufsize);
+			if (!buffer)
 				return -1;
-			buf = tmp;
-			*lineptr = buf;
-			*n *= 2;
+			*lineptr = buffer;
+			*n = bufsize;
 		}
-		buf[i++] = ch;
-		if (ch == '\n')
+		buffer[i++] = c;
+		if (c == '\n')
 			break;
 	}
-	if (i == 0 && ch == EOF)
-		return -1;
-
-	buf[i] = '\0';
-	return (ssize_t)i;
+	buffer[i] = '\0';
+	return i;
 }
 

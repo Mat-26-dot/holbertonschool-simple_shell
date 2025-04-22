@@ -16,7 +16,7 @@ int main(void)
 
 		if(interactive)
 			prompt();
-		rd = _getline(&line, &len, stdin);
+		rd = _getline(&line, &len);
 		if (rd == -1)
 		{
 			if (interactive)

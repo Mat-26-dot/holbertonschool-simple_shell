@@ -16,7 +16,7 @@ int main(void)
 		rd = getline(&line, &len, stdin);
 		if (rd == -1)
 		{
-			if (feof(stdin))
+			if (errno == 0)
 				break;
 			perror("getline");
 			continue;

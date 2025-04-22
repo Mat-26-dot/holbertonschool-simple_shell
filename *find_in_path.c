@@ -2,7 +2,7 @@
 
 char *find_in_path(char *cmd)
 {
-	char *path = getenv("PATH");
+	char *path = _getenv("PATH");
 	char *token = strtok(strdup(path), ":");
 	static char full_path[1024];
 

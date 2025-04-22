@@ -8,7 +8,7 @@ int main(void)
 	char *args[MAX_ARGS];
 	char *cmd_path = "";
 	pid_t pid;
-	int status;
+	int status = 0;
 	int interactive = isatty(STDIN_FILENO);
 
 	while (1)
@@ -35,6 +35,7 @@ int main(void)
 		if (!cmd_path)
 		{
 			fprintf(stderr, "%s: command not found\n", args[0]);
+			status = 127;
 			continue;
 		}
 		pid = fork();
@@ -51,5 +52,5 @@ int main(void)
 			waitpid(pid, &status, 0);
 	}
 	free(line);
-	return (0);
+	return (status);
 }

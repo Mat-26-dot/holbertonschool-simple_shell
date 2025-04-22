@@ -12,7 +12,9 @@ int main(void)
 
 	while (1)
 	{
-		prompt();
+
+		if(isatty(STDIN_FILENO))
+			prompt();
 		rd = getline(&line, &len, stdin);
 		if (rd == -1)
 		{

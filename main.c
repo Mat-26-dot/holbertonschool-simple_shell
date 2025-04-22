@@ -19,10 +19,9 @@ int main(void)
 		rd = getline(&line, &len, stdin);
 		if (rd == -1)
 		{
-			if (errno == 0)
-				break;
-			perror("getline");
-			continue;
+			if (interactive)
+				putchar('\n');
+			break;
 		}
 
 		parse_line(line, args);

@@ -2,14 +2,14 @@
 
 char *_getenv(const char *name)
 {
-	char **env;
+	int i = 0;
+	size_t len = strlen(name);
 
-	size_t len = (strlen(name));
-	for (env = environ; *env != NULL; env++)
+	for (i = 0; environ[i]; environ++, i++)
 	{
-		if (strncmp(*env, name, len) == 0 && (*env)[len] == '=')
-			return (*env + len + 1);
+		if (strncmp(environ[i], name, len) == 0 && environ[i][len] == '=')
+			return (environ[i] + len + 1);
 	}
 
-	return NULL;
+	return (NULL);
 }

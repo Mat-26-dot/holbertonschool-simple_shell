@@ -10,7 +10,7 @@ char *find_in_path(char *cmd)
 	if (strchr(cmd, '/'))
 		return cmd;
 
-	if (!path)
+	if (!path || path[0] == '\0')
 		return (NULL);
 	path_copy = strdup(path);
 	token = strtok(path_copy, ":");

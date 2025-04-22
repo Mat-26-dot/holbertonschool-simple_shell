@@ -23,6 +23,8 @@ int main(void)
 				putchar('\n');
 			break;
 		}
+		if (line[rd - 1] == '\n')
+			line[rd - 1] = '\0';
 
 		parse_line(line, args);
 
@@ -34,7 +36,7 @@ int main(void)
 		cmd_path = find_in_path(args[0]);
 		if (!cmd_path)
 		{
-			fprintf(stderr, "%s: command not found\n", args[0]);
+			fprintf(stderr, "./hsh: 1: %s: not found\n", args[0]);
 			status = 127;
 			continue;
 		}

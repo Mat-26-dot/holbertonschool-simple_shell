@@ -47,6 +47,7 @@ int main(void)
 		{
 			execve(cmd_path, args, environ);
 			perror("execve");
+			free(cmd_path);
 			exit(EXIT_FAILURE);
 		}
 		else if (pid < 0)

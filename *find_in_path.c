@@ -8,7 +8,7 @@ char *find_in_path(char *cmd)
 	static char full_path[1024];
 
 	if (strchr(cmd, '/'))
-		return cmd;
+		return strdup(cmd);
 
 	path = _getenv("PATH");
 
@@ -27,7 +27,7 @@ char *find_in_path(char *cmd)
 		if (access(full_path, X_OK) == 0)
 		{
 			free(path_copy);
-			return (full_path);
+			return (strdup(full_path));
 		}
 		token = strtok(NULL, ":");
 	}

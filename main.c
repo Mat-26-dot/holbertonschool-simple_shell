@@ -10,6 +10,7 @@ int main(void)
 	pid_t pid;
 	int status = 0;
 	int interactive = isatty(STDIN_FILENO);
+	int wstatus;
 
 	while (1)
 	{
@@ -54,9 +55,9 @@ int main(void)
 			perror("fork");
 		else
 		{
-			waitpid(pid, &status, 0);
-			if (WIFEXITED(status))
-				status = WEXITSTATUS(status);
+			waitpid(pid, &wstatus, 0);
+			if (WIFEXITED(wstatus))
+				status = WEXITSTATUS(wstatus);
 			free(cmd_path);
 
 		}

@@ -16,7 +16,7 @@ int main(void)
 
 		if(interactive)
 			prompt();
-		rd = getline(&line, &len, stdin);
+		rd = _getline(&line, &len, stdin);
 		if (rd == -1)
 		{
 			if (interactive)
@@ -30,7 +30,7 @@ int main(void)
 
 		if (args[0] == NULL)
 			continue;
-		if (command(args))
+		if (command(args, line))
 			continue;
 
 		cmd_path = find_in_path(args[0]);
@@ -47,6 +47,7 @@ int main(void)
 			execve(cmd_path, args, environ);
 			perror("execve");
 			free(cmd_path);
+			free(line);
 			exit(EXIT_FAILURE);
 		}
 		else if (pid < 0)

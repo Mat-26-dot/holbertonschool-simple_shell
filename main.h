@@ -15,9 +15,10 @@ extern char **environ;
 
 void prompt(void);
 void parse_line(char *line, char **args);
-int command(char **args);
+int command(char **args, char *line);
 char *find_in_path(char *command);
 char *_getenv(const char *name);
+ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 
 
 

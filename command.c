@@ -1,6 +1,6 @@
 #include "main.h"
 
-int command(char **arg)
+int command(char **arg, char *line)
 {
 	int i = 0;
 
@@ -8,8 +8,10 @@ int command(char **arg)
 		return (1);
 
 	if (strcmp(arg[0], "exit") == 0)
+	{
+		free(line);
 		exit(0);
-
+	}
 	if (strcmp(arg[0], "env") == 0)
 	{
 		for (i = 0; environ[i]; i++)

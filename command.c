@@ -1,6 +1,6 @@
 #include "main.h"
 
-int command(char **arg, char *line)
+int command(char **arg, char *line, int status)
 {
 	int i = 0;
 
@@ -10,7 +10,7 @@ int command(char **arg, char *line)
 	if (strcmp(arg[0], "exit") == 0)
 	{
 		free(line);
-		exit(0);
+		exit(status);
 	}
 	if (strcmp(arg[0], "env") == 0)
 	{

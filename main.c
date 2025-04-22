@@ -31,7 +31,7 @@ int main(void)
 
 		if (args[0] == NULL)
 			continue;
-		if (command(args, line))
+		if (command(args, line, status))
 			continue;
 
 		cmd_path = find_in_path(args[0]);

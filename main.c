@@ -38,7 +38,6 @@ int main(void)
 		{
 			fprintf(stderr, "./hsh: 1: %s: not found\n", args[0]);
 			status = 127;
-			free(cmd_path);
 			continue;
 		}
 		pid = fork();

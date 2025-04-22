@@ -3,15 +3,17 @@
 char *find_in_path(char *cmd)
 {
 	char *path = _getenv("PATH");
-	char *path_copy = strdup(path);
-	char *token = strtok(path_copy, ":");
+	char *path_copy;
+	char *token;
 	static char full_path[1024];
 
 	if (strchr(cmd, '/'))
-	{
-		free(path_copy);
 		return cmd;
-	}
+
+	if (!path)
+		return (NULL);
+	path_copy = strdup(path);
+	token = strtok(path_copy, ":");
 
 	while (token != NULL)
 	{
